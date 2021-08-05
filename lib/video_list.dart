@@ -8,7 +8,9 @@ class VideoList extends StatelessWidget {
   final bool isHorizontalList;
 
   const VideoList(
-      {this.listData, this.isMiniList = false, this.isHorizontalList = false});
+      {required this.listData,
+      this.isMiniList = false,
+      this.isHorizontalList = false});
 
   @override
   Widget build(BuildContext context) {
@@ -41,8 +43,8 @@ class VideoList extends StatelessWidget {
               onTap: () {
                 Navigator.of(context).push(MaterialPageRoute(
                   builder: (context) => VideoDetail(
-                        detail: listData[index],
-                      ),
+                    detail: listData[index],
+                  ),
                 ));
               },
               child: _buildLandscapeList(context, index),
@@ -52,8 +54,8 @@ class VideoList extends StatelessWidget {
               onTap: () {
                 Navigator.of(context).push(MaterialPageRoute(
                   builder: (context) => VideoDetail(
-                        detail: listData[index],
-                      ),
+                    detail: listData[index],
+                  ),
                 ));
               },
               child: _buildPortraitList(context, index),
@@ -61,9 +63,9 @@ class VideoList extends StatelessWidget {
           }
         },
         separatorBuilder: (context, index) => Divider(
-              height: 1.0,
-              color: Colors.grey,
-            ),
+          height: 1.0,
+          color: Colors.grey,
+        ),
         itemCount: listData.length,
       );
     }
