@@ -6,7 +6,8 @@ class MessagesScreen extends StatefulWidget {
   _MessagesScreenState createState() => _MessagesScreenState();
 }
 
-class _MessagesScreenState extends State<MessagesScreen> with AutomaticKeepAliveClientMixin<MessagesScreen> {
+class _MessagesScreenState extends State<MessagesScreen>
+    with AutomaticKeepAliveClientMixin<MessagesScreen> {
   bool _isVisible = true;
 
   @override
@@ -26,7 +27,7 @@ class _MessagesScreenState extends State<MessagesScreen> with AutomaticKeepAlive
   Widget _buildTopButtons() {
     return Container(
       decoration: BoxDecoration(
-        border: Border(bottom: BorderSide(color: Colors.grey[300])),
+        border: Border(bottom: BorderSide(color: Colors.grey[300]!)),
       ),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -70,7 +71,7 @@ class _MessagesScreenState extends State<MessagesScreen> with AutomaticKeepAlive
           height: 140.0,
           padding: const EdgeInsets.only(bottom: 16.0),
           decoration: BoxDecoration(
-              border: Border(bottom: BorderSide(color: Colors.grey[400]))),
+              border: Border(bottom: BorderSide(color: Colors.grey[400]!))),
           child: ListView(
             scrollDirection: Axis.horizontal,
             children: <Widget>[
@@ -155,5 +156,4 @@ class _MessagesScreenState extends State<MessagesScreen> with AutomaticKeepAlive
       ),
     );
   }
-
 }
