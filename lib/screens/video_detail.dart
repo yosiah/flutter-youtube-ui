@@ -5,7 +5,7 @@ import 'package:flutter_youtube_ui/video_list.dart';
 class VideoDetail extends StatefulWidget {
   final YoutubeModel detail;
 
-  const VideoDetail({Key key, @required this.detail}) : super(key: key);
+  const VideoDetail({Key? key, required this.detail}) : super(key: key);
 
   @override
   _VideoDetailState createState() => _VideoDetailState();
@@ -47,7 +47,8 @@ class _VideoDetailState extends State<VideoDetail> {
       width: MediaQuery.of(context).size.width,
       height: MediaQuery.of(context).orientation == Orientation.portrait
           ? 200.0
-          : MediaQuery.of(context).size.height - MediaQuery.of(context).padding.top,
+          : MediaQuery.of(context).size.height -
+              MediaQuery.of(context).padding.top,
       decoration: BoxDecoration(
           image: DecorationImage(
               image: NetworkImage(widget.detail.thumbNail), fit: BoxFit.cover)),
